@@ -13,19 +13,19 @@ class Waterbottle:
     def __str__(self) -> str:
         return f"A {self.colour} {self.brand} bottle, {self.volume}"
 
-def find_bottle_by_colour(bottles: list[Waterbottle], 
-                          colour: str) -> Waterbottle:
-    for bottle in bottles:
-        if bottle.colour == "transparent":
-            return bottle
+    def find_bottle_by_colour(bottles: list[Waterbottle], 
+                              colour: str) -> Waterbottle:
+        for bottle in bottles:
+            if bottle.colour == "transparent":
+                return bottle
 
-def filter_by_min_volume(bottles: List[Waterbottle], min_volume: int) -> List[Waterbottle]:
-    filtered = []
-    for bottle in bottles:
-        if bottle.volume >= min_volume:
-            filtered.append(bottle)
+    def filter_by_min_volume(bottles: List[Waterbottle], min_volume: int) -> List[Waterbottle]:
+        filtered = []
+        for bottle in bottles:
+            if bottle.volume >= min_volume:
+                filtered.append(bottle)
 
-    return filtered
+        return filtered
 
 bottles = [
     Waterbottle("Contigo", 750, "blue"),
